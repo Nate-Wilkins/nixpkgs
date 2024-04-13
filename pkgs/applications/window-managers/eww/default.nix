@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage rec {
 
   buildInputs = [ gtk3 librsvg gtk-layer-shell ];
 
-  cargoBuildFlags = [ "--bin" "eww" ];
+  cargoBuildFlags = [ "--bin" "eww" "--no-default-features" "--features" "wayland" ];
 
   cargoTestFlags = cargoBuildFlags;
 
